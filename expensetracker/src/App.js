@@ -1,11 +1,13 @@
 import './App.css';
-import Tracker from "./traker";
-import { SnackbarProvider } from 'notistack'
+import Tracker from "./Tracker";   // ✅ Corrected import
+import { SnackbarProvider } from 'notistack';
+
 function App() {
   return (
     <SnackbarProvider maxSnack={3}>
       <div className="App">
-        <Tracker/>
+        {/* ✅ Ensure Tracker renders a header with "Expense Tracker" */}
+        <Tracker />
       </div>
     </SnackbarProvider>
   );
